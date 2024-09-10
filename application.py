@@ -11,11 +11,8 @@ app = application
 model = pickle.load(open('./model/ridge.pkl', 'rb'))
 scaler = pickle.load(open('./model/scaler.pkl', 'rb'))
 
-@app.route("/")
-def index():
-    return render_template('index.html')
 
-@app.route("/predictdata", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def predictdata():
     if request.method == 'POST':
         try:
