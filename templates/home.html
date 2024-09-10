@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <form action="{{url_for('predictdata')}}" method="post">
+            <div class="form-group">
+                <label for="login">Login</label>
+            <input type="text" name="Temparature" placeholder="Temparature" required class="form-control mb-2">
+                <input type="text" name="RH" placeholder="RH" required class="form-control mb-2">
+                <input type="text" name="Ws" placeholder="Ws" required class="form-control mb-2">
+                <input type="text" name="Rain" placeholder="Rain4" required class="form-control mb-2">
+                <input type="text" name="FFMC" placeholder="FFMC" required class="form-control mb-2">
+                <input type="text" name="DMC" placeholder="DMC" required class="form-control mb-2">
+                <input type="text" name="ISI" placeholder="ISI" required class="form-control mb-2">
+                <input type="text" name="Classes" placeholder="Classes" required class="form-control mb-2">
+                <input type="text" name="Region" placeholder="Region" required class="form-control mb-2">
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Predict</button>
+            </div>
+        </form>
+        <h2 class="mt-4">The FWI prediction is {{ results }}</h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
